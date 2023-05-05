@@ -26,7 +26,7 @@ def main(config):
 
     lr = random.random() * 0.0005 + 0.0000005
     augmentation_prob = random.random() * 0.7
-    epoch=100
+    epoch=150
     #epoch = random.choice([100, 150])
     decay_ratio = random.random() * 0.8
     decay_epoch = int(epoch * decay_ratio)
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # model hyper-parameters
-    parser.add_argument('--image_size', type=int, default=64)
+    parser.add_argument('--image_size', type=int, default=128)
     parser.add_argument('--t', type=int, default=3, help='t for Recurrent step of R2U_Net or R2AttU_Net')
 
     # training hyper-parameters
@@ -81,12 +81,12 @@ if __name__ == '__main__':
     parser.add_argument('--output_ch', type=int, default=1)
     parser.add_argument('--num_epochs', type=int, default=100)
     parser.add_argument('--num_epochs_decay', type=int, default=70)
-    parser.add_argument('--batch_size', type=int, default=2)
+    parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--num_workers', type=int, default=4)
-    parser.add_argument('--lr', type=float, default=0.0002)
+    parser.add_argument('--lr', type=float, default=0.0001)
     parser.add_argument('--beta1', type=float, default=0.5)  # momentum1 in Adam
     parser.add_argument('--beta2', type=float, default=0.999)  # momentum2 in Adam
-    parser.add_argument('--augmentation_prob', type=float, default=0.4)
+    parser.add_argument('--augmentation_prob', type=float, default=0.5)
 
     parser.add_argument('--log_step', type=int, default=2)
     parser.add_argument('--val_step', type=int, default=2)

@@ -9,7 +9,7 @@ from torchvision.transforms import functional as F
 
 
 class ImageFolder(data.Dataset):
-    def __init__(self, root, image_size=224, mode='train', augmentation_prob=0.4):
+    def __init__(self, root, image_size=128, mode='train', augmentation_prob=0.4):
         """Initializes image paths and preprocessing module."""
         self.root = root
 
@@ -27,6 +27,7 @@ class ImageFolder(data.Dataset):
         image_path = self.image_paths[index]  # imgs
         filename = image_path.split('/')[-1]
         GT_path = self.GT_paths + '/'+filename
+        # print("GT_path"+GT_path)
 
         image = Image.open(image_path)
         image = image.convert('RGB')
@@ -101,7 +102,7 @@ class ImageFolder(data.Dataset):
         return len(self.image_paths)
 
 
-def get_loader(image_path, image_size, batch_size, num_workers=2, mode='train', augmentation_prob=0.4):
+def get_loader(image_path, image_size, batch_size, num_workers=1, mode='train', augmentation_prob=0.4):
     """Builds and returns Dataloader."""
 
     dataset = ImageFolder(root=image_path, image_size=image_size, mode=mode, augmentation_prob=augmentation_prob)
