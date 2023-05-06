@@ -81,12 +81,12 @@ if __name__ == '__main__':
     parser.add_argument('--output_ch', type=int, default=1)
     parser.add_argument('--num_epochs', type=int, default=100)
     parser.add_argument('--num_epochs_decay', type=int, default=70)
-    parser.add_argument('--batch_size', type=int, default=2)
+    parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--num_workers', type=int, default=4)
     parser.add_argument('--lr', type=float, default=0.0001)
     parser.add_argument('--beta1', type=float, default=0.5)  # momentum1 in Adam
     parser.add_argument('--beta2', type=float, default=0.999)  # momentum2 in Adam
-    parser.add_argument('--augmentation_prob', type=float, default=0.3)
+    parser.add_argument('--augmentation_prob', type=float, default=0.35)
 
     parser.add_argument('--log_step', type=int, default=2)
     parser.add_argument('--val_step', type=int, default=2)

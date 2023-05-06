@@ -8,6 +8,7 @@ from evaluation import *
 from network import U_Net, R2U_Net, AttU_Net, R2AttU_Net
 
 
+
 class Solver(object):
     def __init__(self, config, train_loader, valid_loader, test_loader):
 
