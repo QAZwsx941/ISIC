@@ -2,11 +2,13 @@ import argparse
 import os
 import random
 
+import torch
 from torch.backends import cudnn
 
 from data_loader import get_loader
 from solver import Solver
 
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 def main(config):
     cudnn.benchmark = True
@@ -24,6 +26,8 @@ def main(config):
     if not os.path.exists(config.result_path):
         os.makedirs(config.result_path)
 
+
+
     lr = random.random() * 0.0005 + 0.0000005
     augmentation_prob = random.random() * 0.7
     epoch=150
@@ -32,8 +36,6 @@ def main(config):
     decay_epoch = int(epoch * decay_ratio)
 
 
-    
-    
     config.augmentation_prob = augmentation_prob
     config.num_epochs = epoch
     config.lr = lr
