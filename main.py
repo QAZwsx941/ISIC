@@ -28,8 +28,12 @@ def main(config):
 
 
 
-    lr = random.random() * 0.0005 + 0.0000005
-    augmentation_prob = random.random() * 0.7
+    # lr = random.random() * 0.0005 + 0.0000005
+    lr = 0.0001
+    print(lr)
+    # augmentation_prob = random.random() * 0.7
+    augmentation_prob = 0.4
+    print(augmentation_prob)
     epoch=150
     #epoch = random.choice([100, 150])
     decay_ratio = random.random() * 0.8

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="root@connect.neimeng.seetacloud.com:48675" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="root@region-9.seetacloud.com:30053" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="root@connect.neimeng.seetacloud.com:23486">
@@ -35,6 +35,13 @@
         <serverdata>
           <mappings>
             <mapping deploy="/tmp/pycharm_project_92" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@region-9.seetacloud.com:30053">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_932" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
