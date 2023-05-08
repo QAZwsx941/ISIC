@@ -28,13 +28,13 @@ def main(config):
 
 
 
-    # lr = random.random() * 0.0005 + 0.0000005
-    lr = 0.0001
+    lr = random.random() * 0.0005 + 0.0000005
+    # lr = 0.0000001
     print(lr)
-    # augmentation_prob = random.random() * 0.7
-    augmentation_prob = 0.4
-    print(augmentation_prob)
-    epoch=150
+    augmentation_prob = random.random() * 0.7
+    # augmentation_prob = 0.4
+    # print(augmentation_prob)
+    epoch=50
     #epoch = random.choice([100, 150])
     decay_ratio = random.random() * 0.8
     decay_epoch = int(epoch * decay_ratio)
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_epochs', type=int, default=100)
     parser.add_argument('--num_epochs_decay', type=int, default=70)
     parser.add_argument('--batch_size', type=int, default=1)
-    parser.add_argument('--num_workers', type=int, default=8)
+    parser.add_argument('--num_workers', type=int, default=4)
     parser.add_argument('--lr', type=float, default=0.0002)
     parser.add_argument('--beta1', type=float, default=0.5)  # momentum1 in Adam
     parser.add_argument('--beta2', type=float, default=0.999)  # momentum2 in Adam
